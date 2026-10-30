@@ -19,7 +19,7 @@ api_key = st.secrets["api_key"]
 with st.form("params"):
     tournament_id = st.text_input(
         "Tournament ID",
-        value="thesideralwolf-tournament-series-pauper-4",
+        value="insert your tournament id...",
     )
     site = st.text_input("Sito", value="https://topdeck.gg")
     submitted = st.form_submit_button("Aggiorna")
