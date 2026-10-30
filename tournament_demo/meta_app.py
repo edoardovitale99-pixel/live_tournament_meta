@@ -32,11 +32,11 @@ def run_analysis(api_key, tournament_id, site):
 
 if submitted:
     # i parametri restano in sessione, così cambiare archetipo non resetta la pagina
-    st.session_state["params"] = (tournament_id, site)
+    st.session_state["meta_params"] = (tournament_id, site)   
     run_analysis.clear()
 
-if "params" in st.session_state:
-    tournament_id, site = st.session_state["params"]
+if "meta_params" in st.session_state:                          
+    tournament_id, site = st.session_state["meta_params"]      
     with st.spinner("Scaricando classifica..."):
         try:
             standings = run_analysis(api_key, tournament_id, site)
